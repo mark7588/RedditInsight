@@ -1,0 +1,297 @@
+/* Custom styles for Reddit User Analyzer */
+
+.card {
+    border: none;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    transition: box-shadow 0.15s ease-in-out;
+}
+
+.card:hover {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+/* Light mode styles */
+.light-mode {
+    background-color: white !important;
+    color: black !important;
+}
+
+.light-mode .card {
+    background-color: white !important;
+    color: black !important;
+    border: 1px solid #dee2e6 !important;
+}
+
+.light-mode .card-header {
+    background-color: #f8f9fa !important;
+    color: black !important;
+    border-bottom: 1px solid #dee2e6 !important;
+}
+
+.light-mode .btn-primary {
+    background-color: #FF5700 !important;
+    border-color: #FF5700 !important;
+    color: white !important;
+}
+
+.light-mode .btn-primary:hover {
+    background-color: #e04d00 !important;
+    border-color: #e04d00 !important;
+}
+
+.light-mode .btn-secondary {
+    background-color: #FF5700 !important;
+    border-color: #FF5700 !important;
+    color: white !important;
+}
+
+.light-mode .btn-secondary:hover {
+    background-color: #e04d00 !important;
+    border-color: #e04d00 !important;
+}
+
+.light-mode .btn-outline-secondary {
+    color: #FF5700 !important;
+    border-color: #FF5700 !important;
+}
+
+.light-mode .btn-outline-secondary:hover {
+    background-color: #FF5700 !important;
+    border-color: #FF5700 !important;
+    color: white !important;
+}
+
+.light-mode .text-warning {
+    color: #FF5700 !important;
+}
+
+.light-mode .text-primary {
+    color: #FF5700 !important;
+}
+
+.light-mode .progress-bar {
+    background-color: #FF5700 !important;
+}
+
+.light-mode .progress-bar.bg-info {
+    background-color: #FF5700 !important;
+}
+
+.light-mode .trait-badge {
+    background-color: #FF5700 !important;
+    color: white !important;
+}
+
+.light-mode .subreddit-badge {
+    background-color: #FF5700 !important;
+    color: white !important;
+}
+
+.light-mode .input-group-text {
+    background-color: #f8f9fa !important;
+    color: black !important;
+    border-color: #ced4da !important;
+}
+
+.light-mode .form-control {
+    background-color: white !important;
+    color: black !important;
+    border-color: #ced4da !important;
+}
+
+.light-mode .form-control:focus {
+    border-color: #FF5700 !important;
+    box-shadow: 0 0 0 0.2rem rgba(255, 87, 0, 0.25) !important;
+}
+
+.light-mode .form-control::placeholder {
+    color: #6c757d !important;
+    opacity: 1 !important;
+}
+
+.light-mode .form-label {
+    color: black !important;
+}
+
+.light-mode .form-text {
+    color: #6c757d !important;
+}
+
+.light-mode .text-muted {
+    color: #6c757d !important;
+}
+
+.light-mode .spinner-border {
+    color: #FF5700 !important;
+}
+
+.light-mode .alert-danger {
+    background-color: #f8d7da !important;
+    border-color: #f5c6cb !important;
+    color: #721c24 !important;
+}
+
+.light-mode .keyword-high {
+    background-color: #FF5700 !important;
+    color: white !important;
+}
+
+.light-mode .keyword-medium {
+    background-color: #FF5700 !important;
+    color: white !important;
+    opacity: 0.8;
+}
+
+.light-mode .keyword-low {
+    background-color: #FF5700 !important;
+    color: white !important;
+    opacity: 0.6;
+}
+
+.progress {
+    height: 8px;
+}
+
+.spinner-border {
+    width: 3rem;
+    height: 3rem;
+}
+
+.badge-custom {
+    font-size: 0.8em;
+    margin: 0.2rem;
+    padding: 0.4rem 0.8rem;
+}
+
+.sentiment-positive {
+    background-color: var(--bs-success);
+}
+
+.sentiment-neutral {
+    background-color: var(--bs-secondary);
+}
+
+.sentiment-negative {
+    background-color: var(--bs-danger);
+}
+
+/* Chart containers */
+canvas {
+    max-height: 400px;
+}
+
+/* Loading state */
+#loadingState {
+    padding: 2rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .display-4 {
+        font-size: 2rem;
+    }
+    
+    .card-body {
+        padding: 1rem;
+    }
+    
+    canvas {
+        max-height: 300px;
+    }
+}
+
+/* Custom animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Trait badges */
+.trait-badge {
+    display: inline-block;
+    margin: 0.25rem;
+    padding: 0.5rem 1rem;
+    background-color: var(--bs-primary);
+    color: white;
+    border-radius: 2rem;
+    font-size: 0.875rem;
+}
+
+.subreddit-badge {
+    display: inline-block;
+    margin: 0.25rem;
+    padding: 0.375rem 0.75rem;
+    background-color: var(--bs-info);
+    color: white;
+    border-radius: 1rem;
+    font-size: 0.8rem;
+}
+
+/* Keyword badges */
+.keyword-badge {
+    display: inline-flex;
+    align-items: center;
+    margin: 0.25rem;
+    padding: 0.5rem 0.75rem;
+    border-radius: 1.5rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: transform 0.2s ease;
+}
+
+.keyword-badge:hover {
+    transform: scale(1.05);
+}
+
+.keyword-text {
+    margin-right: 0.5rem;
+}
+
+.keyword-count {
+    background-color: rgba(255, 255, 255, 0.3);
+    padding: 0.2rem 0.5rem;
+    border-radius: 0.75rem;
+    font-size: 0.75rem;
+    font-weight: bold;
+}
+
+.keyword-high {
+    background-color: var(--bs-primary);
+    color: white;
+    font-size: 1rem;
+}
+
+.keyword-medium {
+    background-color: var(--bs-info);
+    color: white;
+    font-size: 0.9rem;
+}
+
+.keyword-low {
+    background-color: var(--bs-secondary);
+    color: white;
+    font-size: 0.8rem;
+}
+
+/* Error states */
+.alert {
+    border: none;
+    border-radius: 0.5rem;
+}
+
+/* Form styling */
+.input-group-text {
+    background-color: var(--bs-secondary);
+    border-color: var(--bs-border-color);
+}
+
+/* Chart responsive container */
+.chart-container {
+    position: relative;
+    height: 300px;
+    width: 100%;
+}
